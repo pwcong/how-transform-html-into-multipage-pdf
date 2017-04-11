@@ -29,6 +29,10 @@ execute the method `renderPDF` that require one parameter (3 optional parameters
 # API
 
 * renderPDF(content: Element, pdfName: string, format: string, onSuccess: function )
+    * content[Required]: the html element will be transfromed
+    * pdfName[Optional]: the filename of PDF, default is "content"
+    * format[Optional]: decide the page format of final PDF, default is "a4"
+    * onSuccess[Optional]: execute the function when generate PDF successfully 
 
 # Others
 ## About PDF Format
