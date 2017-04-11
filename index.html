@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>How transform HTML into Multipage PDF</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="./css/style.css" rel="stylesheet">
+    </head>
+    <body>
+
+        <div class="tips">
+            正在生成PDF中。。。
+        </div>
+
+        <div class="container">
+
+            <div id="content">
+
+                <img src="./img/1.jpg">
+                <img src="./img/2.jpg">
+                <img src="./img/3.jpg">
+
+            </div>
+
+        </div>
+
+        <div id="btn"><img src="./img/pdf.png">导出PDF</div>
+
+        <script src="./js/jspdf.debug.js"></script>
+        <script src="./js/html2canvas.js"></script>
+        <script src="./renderPDF.js"></script>
+        
+        <script>
+
+            document.body.onload = function(){
+
+                document.getElementById("btn").onclick = function(e){
+
+                    let tips = document.getElementsByClassName("tips")[0];
+                    tips.id = "active";
+
+                    renderPDF(document.getElementById("content"),"content","a4", function(){
+                        tips.id = "";
+                    });
+                }
+
+            }
+
+        </script>
+
+
+    </body>
+</html>

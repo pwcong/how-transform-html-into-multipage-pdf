@@ -1,0 +1,74 @@
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+    margin: 0px;
+}
+
+.container{
+
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#content{
+    display: flex;
+    flex-flow: row wrap;
+    width: 500px;
+    border: 1px grey solid;
+}
+
+#content img{
+    min-width: 100%;
+    height: auto;
+}
+
+.tips{
+    position: fixed;
+    left: 0px;
+    top: -48px;
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #00796B;
+    
+    transition: top 0.4s;
+}
+
+#active{
+
+    top: 0px;
+}
+
+
+#btn{
+    right: 8px;
+    bottom: 8px;
+    font-size: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 4px 8px 4px 8px;
+    position: fixed;
+    background-color: #00796B;
+    cursor: pointer;
+    transition: background-color 0.4s;
+}
+
+#btn:hover{
+    background-color: #009688;
+}
+
+#btn:active{
+    background-color: #004D40;
+}
+
+#btn img{
+    margin-right: 4px;
+    width: 28px;
+    height: 28px;
+}
