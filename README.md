@@ -28,7 +28,7 @@ execute the method `renderPDF` that require one parameter (3 optional parameters
 
 # API
 
-## renderPDF(content: Element, pdfName: string, format: string, onSuccess: function )
+* renderPDF(content: Element, pdfName: string, format: string, onSuccess: function )
 
 # Others
 ## About PDF Format
