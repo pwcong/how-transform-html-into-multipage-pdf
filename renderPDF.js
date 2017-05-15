@@ -71,6 +71,16 @@
     // 'tabloid': [792, 1224]
     global.renderPDF = function(content, pdfName="content", format="a4", onSuccess){
 
+        var copyContent = content.cloneNode();
+
+        copyContent.innerHTML = content.innerHTML;
+        copyContent.style.position = "absolute";
+        copyContent.style.zIndex = "-999";
+
+        content = copyContent;
+
+        document.body.appendChild(content);
+
         var pdfProportion = pdfFormat[format][0] / pdfFormat[format][1];
 
         var contentHeight = content.offsetHeight;
@@ -147,6 +157,7 @@
                             pdf.addImage(pageData, 'JPEG', 0, 0,pdfFormat[format][0], pdfFormat[format][1]/pageHeight*lastPageHeight);
 
                             document.body.removeChild(page);
+                            document.body.removeChild(content);
 
                             onSuccess && onSuccess();
 
