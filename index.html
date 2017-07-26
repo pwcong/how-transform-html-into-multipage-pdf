@@ -36,7 +36,7 @@
 
                 document.getElementById("btn").onclick = function(e){
 
-                    let tips = document.getElementsByClassName("tips")[0];
+                    var tips = document.getElementsByClassName("tips")[0];
                     tips.id = "active";
 
                     renderPDF(document.getElementById("content"),"content","a4", function(){

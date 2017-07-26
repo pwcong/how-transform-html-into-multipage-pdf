@@ -1,7 +1,13 @@
-# how-transform-html-into-multipage-pdf
-A example about how to transform HTML into Multipage PDF
+# How-Transform-HTML-INTO-Multipage-PDF
+A example about how to transform HTML into Multipage PDF.
 
-[Demo预览](http://pwcong.me/how-transform-html-into-multipage-pdf/)
+[Preview Demo](http://pwcong.me/how-transform-html-into-multipage-pdf/)
+
+# Support Browser
+* IE10+
+* Chrome
+* Firefox
+* 360
 
 # Usage
 ## First Step.

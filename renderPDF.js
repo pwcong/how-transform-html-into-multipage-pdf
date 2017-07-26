@@ -1,7 +1,5 @@
 ;(function(global){
 
-    "use strict";
-
     var pdfFormat = {
         'a0': [2383.94, 3370.39],
         'a1': [1683.78, 2383.94],
@@ -69,7 +67,15 @@
     // 'junior-legal': [576, 360],
     // 'ledger': [1224, 792],
     // 'tabloid': [792, 1224]
-    global.renderPDF = function(content, pdfName="content", format="a4", onSuccess){
+    global.renderPDF = function(content, pdfName, format, onSuccess){
+
+        pdfName = pdfName || "content";
+
+        if(pdfName.indexOf(".pdf") < 0){
+            pdfName = pdfName + ".pdf";
+        }
+
+        format = format || "a4";
 
         var copyContent = content.cloneNode();
 
